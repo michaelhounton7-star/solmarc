@@ -267,12 +267,43 @@
             transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
+
+        /* Mobile Menu Animation */
+        #mobileMenu {
+            animation: slideDown 0.3s ease-out;
+        }
+
+        #mobileMenu.hidden {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
     <!-- Bouton WhatsApp Flottant -->
-    <a href="https://wa.me/2290196748941" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
+    <a href="https://wa.me/2290140468080" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -293,12 +324,23 @@
                     <a href="realisations-sltc.html" class="hover:text-blue-400 transition">Réalisations</a>
                     <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105">Contact</a>
                 </div>
-                <button class="md:hidden text-white text-2xl">
+                <button id="hamburgerBtn" class="md:hidden text-white text-2xl" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed w-full bg-gray-900 text-white md:hidden z-40 top-24 left-0 right-0 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col space-y-4">
+            <a href="#accueil" class="hover:text-blue-400 transition py-2">Accueil</a>
+            <a href="engins-sltc.html" class="hover:text-blue-400 transition py-2">Engins</a>
+            <a href="services-sltc.html" class="hover:text-blue-400 transition py-2">Services</a>
+            <a href="realisations-sltc.html" class="hover:text-blue-400 transition py-2">Réalisations</a>
+            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition-all inline-block w-fit">Contact</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <header id="accueil" class="bg-construction text-white min-h-screen flex items-center relative overflow-hidden">
@@ -314,7 +356,7 @@
                     Solmarc : location d'engins TP, transport spécialisé, services logistiques et matériels de sécurité. Des solutions fiables avec une équipe compétente et un matériel moderne.
                 </p>
                 <div data-aos="fade-up" data-aos-delay="600" class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/2290196748941" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-black px-10 py-5 rounded-2xl transition-all shadow-xl shadow-blue-600/30 uppercase text-xs tracking-widest flex items-center gap-2 cta-primary">
+                    <a href="https://wa.me/2290140468080" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-black px-10 py-5 rounded-2xl transition-all shadow-xl shadow-blue-600/30 uppercase text-xs tracking-widest flex items-center gap-2 cta-primary">
                         <i class="fab fa-whatsapp text-lg"></i> Discuter du projet
                     </a>
                     <a href="#equipements" class="backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 px-10 py-5 rounded-2xl transition text-xs font-bold uppercase tracking-widest">Voir le parc</a>
@@ -686,6 +728,22 @@
     
     <script>
         AOS.init({ duration: 1000, once: true });
+
+        // Mobile Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
         // Navbar scroll logic
         window.addEventListener('scroll', () => {

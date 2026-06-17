@@ -183,12 +183,43 @@
             transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
+
+        /* Mobile Menu Animation */
+        #mobileMenu {
+            animation: slideDown 0.3s ease-out;
+        }
+
+        #mobileMenu.hidden {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
     <!-- Bouton WhatsApp Flottant -->
-    <a href="https://wa.me/2290196748941" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
+    <a href="https://wa.me/2290140468080" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -209,12 +240,24 @@
                     <a href="realisations-sltc.html" class="hover:text-blue-400 transition">Réalisations</a>
                     <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105">Contact</a>
                 </div>
-                <button class="md:hidden text-white text-2xl">
+                <button id="hamburgerBtn" class="md:hidden text-white text-2xl" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed w-full bg-gray-900 text-white md:hidden z-40 top-24 left-0 right-0 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col space-y-4">
+            <a href="sltcinter.html" class="hover:text-blue-400 transition py-2">Accueil</a>
+            <a href="engins-sltc.html" class="text-blue-400 py-2">Engins</a>
+            <a href="services-sltc.html" class="hover:text-blue-400 transition py-2">Services</a>
+            <a href="realisations-sltc.html" class="hover:text-blue-400 transition py-2">Réalisations</a>
+            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition-all inline-block w-fit">Contact</a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <header class="bg-gradient-to-br from-blue-900 to-blue-700 text-white min-h-[60vh] flex items-center relative overflow-hidden pt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -624,7 +667,7 @@
             <div class="mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-center" data-aos="fade-up">
                 <h3 class="text-2xl md:text-3xl font-black text-white mb-6">Équipez vos Chantiers en Toute Sécurité</h3>
                 <p class="text-blue-100 mb-8 text-lg">Nous vous proposons les meilleurs équipements de sécurité à des tarifs compétitifs, en gros ou au détail.</p>
-                <a href="https://wa.me/22997298200?text=Je%20suis%20interessé%20par%20les%20matériels%20de%20sécurité%20SLTC%20INTER" target="_blank" class="cta-primary inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="https://wa.me/2290140468080" target="_blank" class="cta-primary inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <i class="fab fa-whatsapp text-xl"></i>
                     Demander un Devis
                 </a>
@@ -753,6 +796,22 @@
     
     <script>
         AOS.init({ duration: 1000, once: true });
+
+        // Mobile Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
     </script>
 </body>
 </html>

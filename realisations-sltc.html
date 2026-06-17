@@ -235,12 +235,43 @@
             font-size: 12px;
             font-weight: bold;
         }
+
+        /* Mobile Menu Animation */
+        #mobileMenu {
+            animation: slideDown 0.3s ease-out;
+        }
+
+        #mobileMenu.hidden {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
     <!-- Bouton WhatsApp Flottant -->
-    <a href="https://wa.me/2290196748941" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
+    <a href="https://wa.me/2290140468080" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -262,12 +293,24 @@
                     <a href="apropos-sltc.html" class="hover:text-blue-400 transition">À propos</a>
                     <a href="sltcinter.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105">Contact</a>
                 </div>
-                <button class="md:hidden text-white text-2xl">
+                <button id="hamburgerBtn" class="md:hidden text-white text-2xl" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed w-full bg-gray-900 text-white md:hidden z-40 top-24 left-0 right-0 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col space-y-4">
+            <a href="sltcinter.html" class="hover:text-blue-400 transition py-2">Accueil</a>
+            <a href="engins-sltc.html" class="hover:text-blue-400 transition py-2">Engins</a>
+            <a href="services-sltc.html" class="hover:text-blue-400 transition py-2">Services</a>
+            <a href="realisations-sltc.html" class="text-blue-400 py-2">Réalisations</a>
+            <a href="apropos-sltc.html" class="hover:text-blue-400 transition py-2">À propos</a>
+            <a href="sltcinter.html#contact" class="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition-all inline-block w-fit">Contact</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <header class="bg-construction text-white min-h-[60vh] flex items-center relative overflow-hidden pt-20">
@@ -473,7 +516,7 @@
             <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-center mt-20" data-aos="fade-up">
                 <h3 class="text-2xl md:text-3xl font-black text-white mb-4">Vous cherchez un partenaire fiable ?</h3>
                 <p class="text-blue-100 mb-8 text-lg">Contactez-nous pour discuter de votre projet</p>
-                <a href="https://wa.me/2290196748941" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg">
+                <a href="https://wa.me/2290140468080" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg">
                     <i class="fab fa-whatsapp text-xl"></i> Demander un devis
                 </a>
             </div>
@@ -712,7 +755,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
             <h2 class="text-4xl md:text-5xl font-black mb-8">Votre Prochain Projet ?</h2>
             <p class="text-lg mb-10 max-w-2xl mx-auto">Rejoignez les centaines de clients qui nous font confiance. Discutons de vos objectifs dès aujourd'hui.</p>
-            <a href="https://wa.me/2290196748941" target="_blank" class="inline-flex items-center bg-white text-blue-600 font-black px-10 py-4 rounded-xl hover:bg-gray-100 transition shadow-lg gap-2">
+            <a href="https://wa.me/2290140468080" target="_blank" class="inline-flex items-center bg-white text-blue-600 font-black px-10 py-4 rounded-xl hover:bg-gray-100 transition shadow-lg gap-2">
                 <i class="fab fa-whatsapp text-xl"></i> DÉMARREZ VOTRE PROJET
             </a>
         </div>
@@ -779,6 +822,22 @@
     
     <script>
         AOS.init({ duration: 1000, once: true });
+
+        // Mobile Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
         // Navbar scroll logic
         window.addEventListener('scroll', () => {
