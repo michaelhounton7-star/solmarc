@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services BTP et logistique complets de Solmarc. Location d'engins, terrassement, construction, génie civil et courtage international au Bénin.">
+    <meta name="keywords" content="services BTP, logistique, terrassement, construction, génie civil, location engins, courtage équipements, services BTP Cotonou">
+    <meta name="author" content="Solmarc">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100'/><text x='50' y='70' font-size='70' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
+    <link rel="canonical" href="https://sltcinter.com/services-sltc.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nos Services | Solmarc">
+    <meta property="og:description" content="Services complets en BTP, logistique et génie civil. Expertise reconnue au Bénin et à l'international.">
+    <meta property="og:url" content="https://sltcinter.com/services-sltc.html">
+    <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%232563eb' width='200' height='200'/><text x='100' y='150' font-size='150' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
+    <meta property="og:image:alt" content="Services BTP et logistique Solmarc">
+    <meta property="og:locale" content="fr_BJ">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nos Services | Solmarc">
+    <meta name="twitter:description" content="Services complets en BTP, logistique et génie civil.">
+    <meta name="twitter:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%232563eb' width='200' height='200'/><text x='100' y='150' font-size='150' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
+    <meta name="twitter:image:alt" content="Services BTP et logistique Solmarc">
+    
+    <title>Nos Services | Solmarc - BTP, Logistique & Génie Civil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        :root {
+            --sltc-blue: #2563eb;
+            --sltc-dark: #0f172a;
+            --sltc-gold: #d4af37;
+            --sltc-gold-light: #e8d5a8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #2563eb, #1d4ed8);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 3s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            to { background-position: 200% center; }
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.2);
+        }
+
+        /* Petit carré or en haut à gauche */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 4px;
+            height: 4px;
+            background: #d4af37;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #25d366;
+            opacity: 0.7;
+            animation: pulse-whatsapp 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% { transform: scale(1); opacity: 0.7; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        .logo-scrolled {
+            filter: brightness(0.8) contrast(1.2);
+        }
+
+        .animated-line {
+            width: 0;
+            height: 4px;
+            background: #2563eb;
+            transition: width 0.8s ease;
+        }
+
+        .aos-animate .animated-line {
+            width: 100px;
+        }
+
+        .bg-construction {
+            background-color: var(--sltc-dark);
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('hero-bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Animation pulse pour CTA */
+        @keyframes ctaPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+
+        .cta-primary {
+            animation: ctaPulse 2s infinite;
+        }
+
+        /* Divider visual subtile */
+        .section-divider {
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.08), transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: '';
+            width: 2px;
+            height: 12px;
+            background: #d4af37;
+            border-radius: 1px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Bouton WhatsApp Flottant -->
+    <a href="https://wa.me/2290196748941" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center bg-white/10 backdrop-blur-lg rounded-2xl px-6 py-3 border border-white/20 shadow-lg transition-all duration-500" id="navContainer">
+                <div class="flex items-center space-x-3">
+                    <a href="sltcinter.html" class="flex items-center space-x-3">
+                        <div class="logo-s" id="navLogo">S</div>
+                        <span class="text-xl font-black text-white" id="navTitle">Solmarc</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-white" id="navLinks">
+                    <a href="sltcinter.html" class="hover:text-blue-400 transition">Accueil</a>
+                    <a href="engins-sltc.html" class="hover:text-blue-400 transition">Engins</a>
+                    <a href="services-sltc.html" class="text-blue-400">Services</a>
+                    <a href="realisations-sltc.html" class="hover:text-blue-600 transition">Réalisations</a>
+                    <a href="apropos-sltc.html" class="hover:text-blue-600 transition">À propos</a>
+                    <a href="sltcinter.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105">Contact</a>                </div>                </div>
+                <button class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-construction text-white min-h-[60vh] flex items-center relative overflow-hidden pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div data-aos="fade-down" class="inline-block px-4 py-1 bg-blue-600/30 border border-blue-500/50 rounded-full mb-6">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-blue-200">Expertise & Fiabilité</span>
+                </div>
+                <h1 data-aos="fade-right" data-aos-delay="200" class="text-4xl md:text-6xl font-black mb-8 leading-[1.1]">
+                    Nos <span class="gradient-text">Services</span> Complets
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="400" class="text-lg text-blue-100 mb-10 leading-relaxed">
+                    Une gamme complète de solutions en BTP, logistique et génie civil pour concrétiser vos projets.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="section-divider"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Service 1: Logistique -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20 py-12">
+                <div data-aos="fade-right">
+                    <div class="inline-block px-4 py-1 bg-blue-100 rounded-full mb-4">
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">Service 1</span>
+                    </div>
+                    <h2 class="text-4xl font-black mb-6 text-gray-900">Logistique & Transport</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Nous offrons des solutions de transport et logistique adaptées à vos besoins spécifiques. Notre flotte de véhicules modernes garantit un acheminement rapide et sûr de vos matériaux vers les chantiers.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Transport de matériaux en vrac et conditionnés</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Gestion d'approvisionnement de chantiers</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Distribution régionale et cross-docking</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Suivi en temps réel des expéditions</span>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left" class="rounded-2xl overflow-hidden shadow-xl">
+                    <img src="lOGO-SLTC.png" alt="Service logistique et transport SLTC" class="w-full h-96 object-cover">
+                </div>
+            </div>
+
+            <!-- Service 2: BTP -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20 py-12">
+                <div data-aos="fade-right" class="rounded-2xl overflow-hidden shadow-xl order-last md:order-first">
+                    <img src="lOGO-SLTC.png" alt="Services de construction BTP SLTC" class="w-full h-96 object-cover">
+                </div>
+                <div data-aos="fade-left" class="order-first md:order-last">
+                    <div class="inline-block px-4 py-1 bg-blue-100 rounded-full mb-4">
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">Service 2</span>
+                    </div>
+                    <h2 class="text-4xl font-black mb-6 text-gray-900">Bâtiment & Travaux Publics</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Réalisez vos projets résidentiels et industriels en toute confiance avec notre équipe d'experts. Nous respectons les normes internationales et garantissons la qualité de chaque réalisation.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Construction résidentielle et commerciale</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Bâtiments industriels et entrepôts</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Rénovation et restructuration</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Respect des délais et budgets</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Génie Civil -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20 py-12">
+                <div data-aos="fade-right">
+                    <div class="inline-block px-4 py-1 bg-blue-100 rounded-full mb-4">
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">Service 3</span>
+                    </div>
+                    <h2 class="text-4xl font-black mb-6 text-gray-900">Génie Civil & Aménagements</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Nous spécialisons dans les grands travaux d'infrastructure. Routes, ponts, aménagements urbains : nos projets façonnent l'avenir.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Infrastructures routières et autoroutières</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Pont et ouvrages d'art</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Aménagements urbains et espaces publics</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Études techniques et expertise</span>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left" class="rounded-2xl overflow-hidden shadow-xl">
+                    <img src="lOGO-SLTC.png" alt="Services de génie civil et aménagements SLTC" class="w-full h-96 object-cover">
+                </div>
+            </div>
+
+            <!-- Service 4: Courtage International -->
+            <div class="grid md:grid-cols-2 gap-12 items-center py-12">
+                <div data-aos="fade-right" class="rounded-2xl overflow-hidden shadow-xl order-last md:order-first">
+                    <img src="lOGO-SLTC.png" alt="Courtage et négoce d'équipements internationaux" class="w-full h-96 object-cover">
+                </div>
+                <div data-aos="fade-left" class="order-first md:order-last">
+                    <div class="inline-block px-4 py-1 bg-blue-100 rounded-full mb-4">
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">Service 4</span>
+                    </div>
+                    <h2 class="text-4xl font-black mb-6 text-gray-900">Courtage & Négoce International</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Accédez à des équipements spécialisés de haute performance via notre réseau international. Nous facilisons l'acquisition et l'importation d'engins sur mesure pour vos besoins spécifiques.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Sourcing d'équipements spécialisés</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Négociation fournisseurs internationaux</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Gestion douanière et logistique</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check text-blue-600 text-xl mt-1"></i>
+                            <span class="text-gray-700">Support technique et maintenance</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Pourquoi nous <span class="text-blue-600">Choisir</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Une expertise reconnue et une fiabilité éprouvée</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div data-aos="fade-up" class="service-card group p-8 bg-white rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3">Expertise</h3>
+                    <p class="text-gray-600 text-sm">Équipes qualifiées avec 15+ ans d'expérience dans le secteur.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="service-card group p-8 bg-white rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3">Équipements Modernes</h3>
+                    <p class="text-gray-600 text-sm">Parc d'engins récents, bien entretenus et conformes aux normes.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="service-card group p-8 bg-white rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3">Partenaires de Confiance</h3>
+                    <p class="text-gray-600 text-sm">Travaillant avec les plus grands clients institutionnels.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="service-card group p-8 bg-white rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3">Réactivité</h3>
+                    <p class="text-gray-600 text-sm">Disponibilité 24/7 et intervention rapide en cas d'urgence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-black mb-8">Prêt à Démarrer Votre Projet ?</h2>
+            <p class="text-lg mb-10 max-w-2xl mx-auto">Contactez nos experts pour une consultation gratuite et un devis personnalisé.</p>
+            <a href="https://wa.me/2290196748941" target="_blank" class="inline-flex items-center bg-white text-blue-600 font-black px-10 py-4 rounded-xl hover:bg-gray-100 transition shadow-lg gap-2 cta-primary">
+                <i class="fab fa-whatsapp text-xl"></i> CONTACTER MAINTENANT
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-16 border-b border-gray-800 pb-16">
+                <div>
+                    <div class="flex items-center space-x-3 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="logo-s">S</div>
+                        <span class="text-2xl font-black">Solmarc</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Expertise reconnue dans le domaine du BTP et de la logistique au Bénin et à l'international.
+                    </p>
+                </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Expertise reconnue dans le domaine du BTP et de la logistique au Bénin et à l'international.</p>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <h4 class="text-lg font-bold mb-4 uppercase tracking-widest text-blue-500">Navigation</h4>
+                    <a href="sltcinter.html" class="text-gray-400 hover:text-white transition">Accueil</a>
+                    <a href="engins-sltc.html" class="text-gray-400 hover:text-white transition">Engins</a>
+                    <a href="services-sltc.html" class="text-blue-400">Services</a>
+                    <a href="realisations-sltc.html" class="text-gray-400 hover:text-white transition">Réalisations</a>
+                    <a href="apropos-sltc.html" class="text-gray-400 hover:text-white transition">À propos</a>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-blue-500">Suivez-nous</h4>
+                    <div class="flex space-x-4 mb-8">
+                        <a href="https://www.facebook.com/profile.php?id=100092304769416" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/sltc-inter-sarl/" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-pink-600 transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@sltcinter" target="_blank" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-black transition duration-300">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-500">
+                <p class="text-xs tracking-[0.3em] uppercase font-bold">© 2025 Solmarc | Expertise & Fiabilité</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Schema.org Structured Data for Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ServiceArea",
+      "name": "Services Solmarc",
+      "url": "https://sltcinter.com/services-sltc.html",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Solmarc",
+        "telephone": "+229 01 96 74 89 41",
+        "email": "sltcinter20@gmail.com",
+        "url": "https://sltcinter.com"
+      },
+      "service": [
+        {
+          "@type": "Service",
+          "name": "Logistique & Transport",
+          "description": "Transport de matériaux et gestion logistique de chantiers"
+        },
+        {
+          "@type": "Service",
+          "name": "Bâtiment & Travaux Publics",
+          "description": "Construction résidentielle et industrielle aux normes internationales"
+        },
+        {
+          "@type": "Service",
+          "name": "Génie Civil & Aménagements",
+          "description": "Infrastructures routières et aménagements urbains"
+        },
+        {
+          "@type": "Service",
+          "name": "Courtage International",
+          "description": "Sourcing et négoce d'équipements spécialisés internationaux"
+        }
+      ]
+    }
+    </script>
+    
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Navbar scroll logic
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const container = document.getElementById('navContainer');
+            const logo = document.getElementById('navLogo');
+            const title = document.getElementById('navTitle');
+            const links = document.getElementById('navLinks');
+
+            if (window.scrollY > 50) {
+                nav.classList.replace('py-6', 'py-3');
+                container.classList.replace('bg-white/10', 'bg-white');
+                container.classList.add('shadow-xl');
+                logo.classList.add('logo-scrolled');
+                title.classList.replace('text-white', 'text-gray-900');
+                links.classList.replace('text-white', 'text-gray-600');
+            } else {
+                nav.classList.replace('py-3', 'py-6');
+                container.classList.replace('bg-white', 'bg-white/10');
+                container.classList.remove('shadow-xl');
+                logo.classList.remove('logo-scrolled');
+                title.classList.replace('text-gray-900', 'text-white');
+                links.classList.replace('text-gray-600', 'text-white');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez nos réalisations et projets. Solmarc a accompli 500+ projets en BTP, logistique et génie civil au Bénin et à l'international.">
+    <meta name="keywords" content="réalisations BTP, projets construction, case studies, portfolio SLTC, travaux Bénin, projets génie civil">
+    <meta name="author" content="Solmarc">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100'/><text x='50' y='70' font-size='70' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
+    <link rel="canonical" href="https://sltcinter.com/realisations-sltc.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Réalisations | Solmarc - Nos Projets">
+    <meta property="og:description" content="Découvrez le portfolio de nos 500+ projets réalisés en BTP, logistique et génie civil.">
+    <meta property="og:url" content="https://sltcinter.com/realisations-sltc.html">
+    <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%232563eb' width='200' height='200'/><text x='100' y='150' font-size='150' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
+    <meta property="og:image:alt" content="Réalisations et projets Solmarc">
+    <meta property="og:locale" content="fr_BJ">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Réalisations | Solmarc">
+    <meta name="twitter:description" content="Portfolio de nos projets réalisés en BTP et logistique.">
+    <meta name="twitter:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%232563eb' width='200' height='200'/><text x='100' y='150' font-size='150' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
+    <meta name="twitter:image:alt" content="Réalisations et projets Solmarc">
+    
+    <title>Réalisations | Solmarc - Nos Projets en BTP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        :root {
+            --sltc-blue: #2563eb;
+            --sltc-dark: #0f172a;
+            --sltc-gold: #d4af37;
+            --sltc-gold-light: #e8d5a8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #2563eb, #1d4ed8);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 3s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            to { background-position: 200% center; }
+        }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Petit accent or au survol */
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 8px;
+            height: 8px;
+            background: #d4af37;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card img {
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #25d366;
+            opacity: 0.7;
+            animation: pulse-whatsapp 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% { transform: scale(1); opacity: 0.7; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
+        /* Animation pulse pour CTA */
+        @keyframes ctaPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+
+        .cta-primary {
+            animation: ctaPulse 2s infinite;
+        }
+
+        /* Divider visual subtile */
+        .section-divider {
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.08), transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: '';
+            width: 2px;
+            height: 12px;
+            background: #d4af37;
+            border-radius: 1px;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        /* Style pour le logo S */
+        .logo-s {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 900;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .logo-s:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .logo-scrolled {
+            filter: brightness(0.8) contrast(1.2);
+        }
+
+        .bg-construction {
+            background-color: var(--sltc-dark);
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('hero-bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: rgba(37, 99, 235, 0.1);
+            color: #2563eb;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Bouton WhatsApp Flottant -->
+    <a href="https://wa.me/2290196748941" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center bg-white/10 backdrop-blur-lg rounded-2xl px-6 py-3 border border-white/20 shadow-lg transition-all duration-500" id="navContainer">
+                <div class="flex items-center space-x-3">
+                    <a href="sltcinter.html" class="flex items-center space-x-3">
+                        <div class="logo-s" id="navLogo">S</div>
+                        <span class="text-xl font-black text-white" id="navTitle">Solmarc</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-white" id="navLinks">
+                    <a href="sltcinter.html" class="hover:text-blue-400 transition">Accueil</a>
+                    <a href="engins-sltc.html" class="hover:text-blue-400 transition">Engins</a>
+                    <a href="services-sltc.html" class="hover:text-blue-400 transition">Services</a>
+                    <a href="realisations-sltc.html" class="text-blue-400">Réalisations</a>
+                    <a href="apropos-sltc.html" class="hover:text-blue-400 transition">À propos</a>
+                    <a href="sltcinter.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105">Contact</a>
+                </div>
+                <button class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-construction text-white min-h-[60vh] flex items-center relative overflow-hidden pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div data-aos="fade-down" class="inline-block px-4 py-1 bg-blue-600/30 border border-blue-500/50 rounded-full mb-6">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-blue-200">Nos Succès</span>
+                </div>
+                <h1 data-aos="fade-right" data-aos-delay="200" class="text-4xl md:text-6xl font-black mb-8 leading-[1.1]">
+                    Nos <span class="gradient-text">Réalisations</span>
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="400" class="text-lg text-blue-100 mb-10 leading-relaxed">
+                    Explorez le portfolio de nos 500+ projets réalisés avec excellence dans le domaine du BTP, de la logistique et du génie civil.
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 floating">
+            <div class="w-1 h-12 bg-gradient-to-b from-blue-600 to-transparent rounded-full"></div>
+        </div>
+    </header>
+
+    <!-- Projets Exécutés avec Partenaires Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Quelques Projets Exécutés avec <span class="text-blue-600">nos Partenaires</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Découvrez nos collaborations fructueuses avec les plus grandes entreprises du secteur BTP et logistique</p>
+            </div>
+
+            <!-- Section Divider -->
+            <div class="section-divider mb-16"></div>
+
+            <!-- 1. Transport de Poteaux -->
+            <div data-aos="fade-up" class="mb-20">
+                <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
+                        <i class="fas fa-truck-moving mr-3"></i>Transport de Poteaux
+                    </h3>
+                    <p class="text-blue-100">PADSBEE I : Transport et distribution de plus de 23 000 poteaux en béton</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4">Partenaires :</h4>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">VINCI ENERGIES</p>
+                            <p class="text-sm text-gray-600">Projet PADSBEE I</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">RMT</p>
+                            <p class="text-sm text-gray-600">Projet PEDER (10 000+ poteaux)</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">AMINE</p>
+                            <p class="text-sm text-gray-600">Projet PEDER</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">CNDS</p>
+                            <p class="text-sm text-gray-600">Transport poteaux & matériaux</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">GENERTEL</p>
+                            <p class="text-sm text-gray-600">Transport poteaux spécialisé</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galerie d'images -->
+                <div class="grid md:grid-cols-5 gap-4">
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop" alt="Transport poteaux" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3788?w=400&h=300&fit=crop" alt="Transport poteaux" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3787?w=400&h=300&fit=crop" alt="Transport poteaux" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3786?w=400&h=300&fit=crop" alt="Transport poteaux" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3785?w=400&h=300&fit=crop" alt="Transport poteaux" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Mise à disposition d'engins de TP -->
+            <div data-aos="fade-up" class="mb-20">
+                <div class="bg-gradient-to-r from-amber-600 to-amber-700 rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
+                        <i class="fas fa-hard-hat mr-3"></i>Mise à Disposition d'Engins de TP
+                    </h3>
+                    <p class="text-amber-100">Construction d'usines, travaux routiers, fouilles, démolitions et génie civil</p>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4">Partenaires :</h4>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-4">
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">GDIZ</p>
+                            <p class="text-sm text-gray-600">Usines</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">Alternative BTP</p>
+                            <p class="text-sm text-gray-600">Travaux routiers</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">Bach BTP</p>
+                            <p class="text-sm text-gray-600">Fouilles</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">ACC</p>
+                            <p class="text-sm text-gray-600">Démolitions & fouilles</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">UNITECH ENERGY</p>
+                            <p class="text-sm text-gray-600">Travaux routiers</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">SOLMAC SARL</p>
+                            <p class="text-sm text-gray-600">Transport poteaux</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galerie d'images -->
+                <div class="grid md:grid-cols-5 gap-4">
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3784?w=400&h=300&fit=crop" alt="Engins TP" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3783?w=400&h=300&fit=crop" alt="Engins TP" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3782?w=400&h=300&fit=crop" alt="Engins TP" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3781?w=400&h=300&fit=crop" alt="Engins TP" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3780?w=400&h=300&fit=crop" alt="Engins TP" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Transport de matériels électriques -->
+            <div data-aos="fade-up" class="mb-20">
+                <div class="bg-gradient-to-r from-indigo-600 to-indigo-700 rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
+                        <i class="fas fa-bolt mr-3"></i>Transport de Matériels Électriques
+                    </h3>
+                    <p class="text-indigo-100">Tourets de câble, transformateurs et accessoires de haute valeur</p>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4">Partenaires :</h4>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">BOUYGUES</p>
+                            <p class="text-sm text-gray-600">Transport électrique</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">AMINE</p>
+                            <p class="text-sm text-gray-600">Accessoires électriques</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">RMT</p>
+                            <p class="text-sm text-gray-600">Matériels spécialisés</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">VINCI ENERGIES</p>
+                            <p class="text-sm text-gray-600">Distribution matériel</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-900">+ autres partenaires</p>
+                            <p class="text-sm text-gray-600">CNDS, GENERTEL, UNITECH</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galerie d'images -->
+                <div class="grid md:grid-cols-5 gap-4">
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3779?w=400&h=300&fit=crop" alt="Transport électrique" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3778?w=400&h=300&fit=crop" alt="Transport électrique" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3777?w=400&h=300&fit=crop" alt="Transport électrique" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3776?w=400&h=300&fit=crop" alt="Transport électrique" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="relative h-48 bg-gray-200 rounded-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3775?w=400&h=300&fit=crop" alt="Transport électrique" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-center mt-20" data-aos="fade-up">
+                <h3 class="text-2xl md:text-3xl font-black text-white mb-4">Vous cherchez un partenaire fiable ?</h3>
+                <p class="text-blue-100 mb-8 text-lg">Contactez-nous pour discuter de votre projet</p>
+                <a href="https://wa.me/2290196748941" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg">
+                    <i class="fab fa-whatsapp text-xl"></i> Demander un devis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button class="filter-btn active px-6 py-2 rounded-full border-2 border-blue-600 bg-blue-600 text-white font-bold text-sm uppercase" data-filter="all">
+                    Tous les Projets
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 bg-white text-gray-700 font-bold text-sm uppercase hover:border-blue-600 hover:text-blue-600" data-filter="btp">
+                    BTP
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 bg-white text-gray-700 font-bold text-sm uppercase hover:border-blue-600 hover:text-blue-600" data-filter="logistique">
+                    Logistique
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 bg-white text-gray-700 font-bold text-sm uppercase hover:border-blue-600 hover:text-blue-600" data-filter="genie">
+                    Génie Civil
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Divider -->
+            <div class="section-divider mb-12"></div>
+            
+            <div id="projectsGrid" class="grid md:grid-cols-3 gap-8">
+                <!-- Projet 1 - BTP -->
+                <div data-aos="fade-up" class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 project-item" data-category="btp">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="lOGO-SLTC.png" alt="Construction résidentielle Cotonou" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <span class="category-badge">Construction</span>
+                        <h3 class="text-xl font-black mt-4 mb-2">Résidence Prestige Cotonou</h3>
+                        <p class="text-gray-600 text-sm mb-4">Construction d'une résidence haut standing de 50 unités avec finitions premium.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-blue-600 font-bold text-sm">2023 - 2024</span>
+                            <i class="fas fa-arrow-right text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - Logistique -->
+                <div data-aos="fade-up" data-aos-delay="100" class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 project-item" data-category="logistique">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="lOGO-SLTC.png" alt="Entrepôt logistique moderne" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <span class="category-badge">Logistique</span>
+                        <h3 class="text-xl font-black mt-4 mb-2">Centre de Distribution Moderne</h3>
+                        <p class="text-gray-600 text-sm mb-4">Gestion logistique complète de distribution pour groupe international avec 500+ camionnages.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-blue-600 font-bold text-sm">2022 - 2024</span>
+                            <i class="fas fa-arrow-right text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - Génie Civil -->
+                <div data-aos="fade-up" data-aos-delay="200" class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 project-item" data-category="genie">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="lOGO-SLTC.png" alt="Route modernisée" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <span class="category-badge">Génie Civil</span>
+                        <h3 class="text-xl font-black mt-4 mb-2">Rénovation Route Nationale</h3>
+                        <p class="text-gray-600 text-sm mb-4">Réfection complète de 45 km de route avec terrassement et revêtement bitumineux.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-blue-600 font-bold text-sm">2023</span>
+                            <i class="fas fa-arrow-right text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - BTP -->
+                <div data-aos="fade-up" class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 project-item" data-category="btp">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="lOGO-SLTC.png" alt="Bâtiment industriel" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <span class="category-badge">Construction</span>
+                        <h3 class="text-xl font-black mt-4 mb-2">Complexe Industriel Abomey-Calavi</h3>
+                        <p class="text-gray-600 text-sm mb-4">Construction d'un complexe industriel de 15 000 m² avec bureaux et ateliers.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-blue-600 font-bold text-sm">2022 - 2023</span>
+                            <i class="fas fa-arrow-right text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - Logistique -->
+                <div data-aos="fade-up" data-aos-delay="100" class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 project-item" data-category="logistique">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="lOGO-SLTC.png" alt="Transport matériaux" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <span class="category-badge">Logistique</span>
+                        <h3 class="text-xl font-black mt-4 mb-2">Transport Matériaux de Construction</h3>
+                        <p class="text-gray-600 text-sm mb-4">Approvisionnement en matériaux pour 20+ chantiers simultanement avec traçabilité complète.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-blue-600 font-bold text-sm">2024</span>
+                            <i class="fas fa-arrow-right text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - Génie Civil -->
+                <div data-aos="fade-up" data-aos-delay="200" class="project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 project-item" data-category="genie">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="lOGO-SLTC.png" alt="Aménagement urbain" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <span class="category-badge">Génie Civil</span>
+                        <h3 class="text-xl font-black mt-4 mb-2">Aménagement Espace Vert Communal</h3>
+                        <p class="text-gray-600 text-sm mb-4">Création d'un parc public de 5 hectares avec plan d'eau et infrastructures.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-blue-600 font-bold text-sm">2021 - 2023</span>
+                            <i class="fas fa-arrow-right text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div data-aos="fade-up" class="text-center">
+                    <div class="text-4xl md:text-5xl font-black text-blue-600 mb-2">500+</div>
+                    <p class="text-gray-600 font-bold">Projets Réalisés</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="text-center">
+                    <div class="text-4xl md:text-5xl font-black text-blue-600 mb-2">10M+</div>
+                    <p class="text-gray-600 font-bold">m² Construits</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="text-center">
+                    <div class="text-4xl md:text-5xl font-black text-blue-600 mb-2">1000+</div>
+                    <p class="text-gray-600 font-bold">Camionnages</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="text-center">
+                    <div class="text-4xl md:text-5xl font-black text-blue-600 mb-2">99%</div>
+                    <p class="text-gray-600 font-bold">Clients Satisfaits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Témoignages de nos <span class="text-blue-600">Clients</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ce que nos clients disent de nos services</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Solmarc a dépassé nos attentes. Professionalisme, ponctualité et qualité au rendez-vous !"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-black">
+                            JD
+                        </div>
+                        <div>
+                            <p class="font-black text-gray-900">Jean Dupont</p>
+                            <p class="text-gray-500 text-sm">Directeur, Constructa Bénin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Équipe réactive, équipements en excellent état, gestion administrative irréprochable."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-black">
+                            AR
+                        </div>
+                        <div>
+                            <p class="font-black text-gray-900">Adèle Rousseau</p>
+                            <p class="text-gray-500 text-sm">Responsable Logistique, TransAfrica</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Partenaire fiable depuis 8 ans. Expertise technique sans égale dans le secteur."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-black">
+                            MK
+                        </div>
+                        <div>
+                            <p class="font-black text-gray-900">Mohamed Karim</p>
+                            <p class="text-gray-500 text-sm">PDG, InfraBénin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-black mb-8">Votre Prochain Projet ?</h2>
+            <p class="text-lg mb-10 max-w-2xl mx-auto">Rejoignez les centaines de clients qui nous font confiance. Discutons de vos objectifs dès aujourd'hui.</p>
+            <a href="https://wa.me/2290196748941" target="_blank" class="inline-flex items-center bg-white text-blue-600 font-black px-10 py-4 rounded-xl hover:bg-gray-100 transition shadow-lg gap-2">
+                <i class="fab fa-whatsapp text-xl"></i> DÉMARREZ VOTRE PROJET
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-16 border-b border-gray-800 pb-16">
+                <div>
+                    <div class="flex items-center space-x-3 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="logo-s">S</div>
+                        <span class="text-2xl font-black">Solmarc</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Expertise reconnue dans le domaine du BTP et de la logistique au Bénin et à l'international.
+                    </p>
+                </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Expertise reconnue dans le domaine du BTP et de la logistique au Bénin et à l'international.</p>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <h4 class="text-lg font-bold mb-4 uppercase tracking-widest text-blue-500">Navigation</h4>
+                    <a href="sltcinter.html" class="text-gray-400 hover:text-white transition">Accueil</a>
+                    <a href="engins-sltc.html" class="text-gray-400 hover:text-white transition">Engins</a>
+                    <a href="services-sltc.html" class="text-gray-400 hover:text-white transition">Services</a>
+                    <a href="realisations-sltc.html" class="text-blue-400">Réalisations</a>
+                    <a href="apropos-sltc.html" class="text-gray-400 hover:text-white transition">À propos</a>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-blue-500">Contact</h4>
+                    <div class="space-y-4 text-gray-400">
+                        <p><i class="fas fa-phone mr-3 text-blue-500"></i>+229 01 96 74 89 41</p>
+                        <p><i class="fas fa-envelope mr-3 text-blue-500"></i>sltcinter20@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-3 text-blue-500"></i>Kouhounou, Cotonou</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-500">
+                <p class="text-xs tracking-[0.3em] uppercase font-bold">© 2025 Solmarc | Expertise & Fiabilité</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Schema.org Structured Data for Gallery -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Réalisations Solmarc",
+      "description": "Portfolio des 500+ projets réalisés en BTP, logistique et génie civil",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Solmarc",
+        "logo": "https://sltcinter.com/lOGO-SLTC.png"
+      }
+    }
+    </script>
+    
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Navbar scroll logic
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const container = document.getElementById('navContainer');
+            const logo = document.getElementById('navLogo');
+            const title = document.getElementById('navTitle');
+            const links = document.getElementById('navLinks');
+
+            if (window.scrollY > 50) {
+                nav.classList.replace('py-6', 'py-3');
+                container.classList.replace('bg-white/10', 'bg-white');
+                container.classList.add('shadow-xl');
+                logo.classList.add('logo-scrolled');
+                title.classList.replace('text-white', 'text-gray-900');
+                links.classList.replace('text-white', 'text-gray-600');
+            } else {
+                nav.classList.replace('py-3', 'py-6');
+                container.classList.replace('bg-white', 'bg-white/10');
+                container.classList.remove('shadow-xl');
+                logo.classList.remove('logo-scrolled');
+                title.classList.replace('text-gray-900', 'text-white');
+                links.classList.replace('text-gray-600', 'text-white');
+            }
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+                    b.classList.add('border-gray-300', 'bg-white', 'text-gray-700');
+                });
+                this.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+                this.classList.remove('border-gray-300', 'bg-white', 'text-gray-700');
+                
+                // Filter projects
+                document.querySelectorAll('.project-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
