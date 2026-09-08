@@ -1,188 +1,108 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SOLMAC SARL - Expert en location d'engins de TP, terrassement et logistique au Bénin. Services BTP professionnels, travaux de construction et génie civil.">
-    <meta name="keywords" content="location engins TP, terrassement Cotonou, BTP Bénin, services logistique, génie civil, construction">
+    <meta name="description" content="SOLMAC SARL - Leader de la location d'engins lourd BTP, terrassement, génie civil et logistique au Bénin. Matériel moderne et accompagnement sur-mesure.">
+    <meta name="keywords" content="SOLMAC SARL, location engins BTP Bénin, terrassement Cotonou, engins lourds, grue de levage, bulldozer, chargeuse, logistique chantier">
     <meta name="author" content="SOLMAC SARL">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#2563eb">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100'/><text x='50' y='70' font-size='70' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
-    <link rel="canonical" href="https://sltcinter.com/index.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:type" content="business.business">
-    <meta property="og:title" content="SOLMAC SARL | Expertise BTP & Logistique au Bénin">
-    <meta property="og:description" content="Location d'engins de TP, services de terrassement et logistique professionnelle. Votre partenaire fiable pour tous vos projets BTP.">
-    <meta property="og:url" content="https://sltcinter.com/index.html">
-    <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%232563eb' width='200' height='200'/><text x='100' y='150' font-size='150' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
-    <meta property="og:image:alt" content="Logo SOLMAC SARL">
-    <meta property="og:locale" content="fr_BJ">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SOLMAC SARL | Expert BTP Logistique">
-    <meta name="twitter:description" content="Location d'engins TP et services de construction professionnels au Bénin.">
-    <meta name="twitter:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect fill='%232563eb' width='200' height='200'/><text x='100' y='150' font-size='150' font-weight='900' fill='white' text-anchor='middle' font-family='Arial'>S</text></svg>">
-    <meta name="twitter:image:alt" content="Logo SOLMAC SARL">
-    
-    <title>SOLMAC SARL | Expertise BTP & Logistique</title>
+    <meta name="theme-color" content="#0c2340">
+    <link rel="icon" type="image/png" href="logo-favicon.png">
+
+    <title>SOLMAC SARL | Au Cœur de l'Ouvrage — BTP, Engins & Logistique au Bénin</title>
+
+    <!-- Préchargement anticipé de la vidéo du hero pour réduire le temps d'affichage -->
+    <link rel="preload" as="video" href="https://cdn.pixabay.com/video/2020/05/25/40132-424912045_small.mp4" type="video/mp4">
+    <link rel="preconnect" href="https://cdn.pixabay.com" crossorigin>
+
+    <!-- Tailwind CSS & Icon Libraries CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        
-        :root {
-            --sltc-blue: #2563eb;
-            --sltc-dark: #0f172a;
-            --sltc-gold: #d4af37;
-            --sltc-gold-light: #e8d5a8;
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Palette strictement définie : Bleu Marine et Orange
+                        navy: {
+                            DEFAULT: '#0c2340', // Bleu marine profond (corporate)
+                            dark: '#071526',    // Bleu marine très sombre (fonds)
+                            light: '#163f73'    // Bleu marine clair (survols)
+                        },
+                        orange: {
+                            DEFAULT: '#ff6600', // Orange BTP dynamique
+                            dark: '#cc5200',    // Orange foncé (survols)
+                            light: '#ff8533'    // Orange clair
+                        },
+                        white: '#ffffff',
+                        offwhite: '#f8fafc'
+                    }
+                }
+            }
         }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap');
 
         body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
+            background-color: #f8fafc;
         }
 
-        /* Effet Parallaxe pour le Hero */
-        .bg-construction {
-            background-color: var(--sltc-dark);
-            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('hero-bg.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        .font-heading {
+            font-family: 'Barlow Condensed', sans-serif;
         }
 
+        /* Gradient animé BTP : Marine vers Orange */
         .gradient-text {
-            background: linear-gradient(to right, #60a5fa, #2563eb, #1d4ed8);
+            background: linear-gradient(135deg, #ff8533 0%, #ff6600 50%, #163f73 100%);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: gradientMove 3s linear infinite;
+            animation: gradientMove 4s linear infinite;
+        }
+        
+        .gradient-orange {
+            background: linear-gradient(135deg, #ff8533 0%, #ff6600 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         @keyframes gradientMove {
-            to { background-position: 200% center; }
+            0% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+            100% { background-position: 0% center; }
         }
 
-        .carousel-logos {
-            display: flex;
-            animation: scrollLogos 30s linear infinite;
-            width: fit-content;
+        /* Glassmorphism effet navbar (teinté bleu marine) */
+        .glass-nav {
+            background: rgba(12, 35, 64, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .carousel-logos:hover {
-            animation-play-state: paused;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(12, 35, 64, 0.08);
         }
 
-        .logo-item {
-            flex-shrink: 0;
-            width: 200px;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 150px;
+        /* Effets de carte */
+        .card-hover {
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        .logo-item img {
-            max-width: 100%;
-            max-height: 100px;
-            object-fit: contain;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -12px rgba(12, 35, 64, 0.15);
         }
 
-        .logo-item:hover img {
-            filter: grayscale(0%);
-        }
-
-        @keyframes scrollLogos {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        /* Effets au survol des cartes */
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.2);
-        }
-
-        /* Petit point or en haut à droite */
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 6px;
-            height: 6px;
-            background: #d4af37;
-            border-radius: 50%;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .service-card:hover::after {
-            opacity: 1;
-        }
-
-        /* Animation de flottement pour l'indicateur */
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Animation pulse pour CTA */
-        @keyframes ctaPulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
-        }
-
-        .cta-primary {
-            animation: ctaPulse 2s infinite;
-        }
-
-        /* Divider visual subtile */
-        .section-divider {
-            height: 60px;
-            background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.08), transparent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .section-divider::before {
-            content: '';
-            width: 2px;
-            height: 12px;
-            background: #d4af37;
-            border-radius: 1px;
-        }
-
-        /* Bouton WhatsApp Flottant */
-        .whatsapp-btn {
+        /* Bouton WhatsApp Flottant Animé (On garde le vert standard de WhatsApp pour la reco utilisateur) */
+        .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
@@ -194,566 +114,1033 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
             transition: all 0.3s ease;
         }
 
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(8deg);
             background-color: #128c7e;
         }
 
-        /* Animation de pulsation pour WhatsApp */
-        .whatsapp-btn::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: #25d366;
-            opacity: 0.7;
-            animation: pulse-whatsapp 2s infinite;
-            z-index: -1;
+        /* Transition entre les pages */
+        .page-view {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
         }
 
-        @keyframes pulse-whatsapp {
-            0% { transform: scale(1); opacity: 0.7; }
-            100% { transform: scale(1.6); opacity: 0; }
+        .page-view.active {
+            display: block;
+            opacity: 1;
         }
 
-        /* Ligne décorative animée */
-        .animated-line {
-            width: 0;
-            height: 4px;
-            background: linear-gradient(to right, #2563eb, #d4af37);
-            transition: width 0.8s ease;
+        /* Custom Scrollbar avec couleurs du thème */
+        ::-webkit-scrollbar {
+            width: 10px;
         }
-        .aos-animate .animated-line {
-            width: 100px;
+        ::-webkit-scrollbar-track {
+            background: #071526;
         }
-
-        /* Effet filtre pour le logo */
-        .logo-scrolled {
-            filter: brightness(0.8) contrast(1.2);
+        ::-webkit-scrollbar-thumb {
+            background: #ff6600;
+            border-radius: 5px;
         }
-
-        /* Style pour le logo */
-        .logo-img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            transition: all 0.3s ease;
-        }
-
-        /* Style pour le logo S */
-        .logo-s {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            font-weight: 900;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-        }
-
-        .logo-s:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-        }
-
-        /* Mobile Menu Animation */
-        #mobileMenu {
-            animation: slideDown 0.3s ease-out;
-        }
-
-        #mobileMenu.hidden {
-            animation: slideUp 0.3s ease-out forwards;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cc5200;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="text-navy antialiased selection:bg-orange selection:text-white flex flex-col min-h-screen">
 
-    <!-- Bouton WhatsApp Flottant -->
-    <a href="https://wa.me/2290140468080" target="_blank" class="whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
+    <!-- Bouton WhatsApp Flottant (Couleur officielle) -->
+    <a href="https://wa.me/2290140468080?text=Bonjour%20SOLMAC%20SARL,%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20services." 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float" 
+       aria-label="Contactez-nous sur WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-6">
+    <!-- Top Info Bar (Bleu Marine foncé) -->
+    <div class="bg-navy-dark text-slate-300 text-xs py-2 px-4 border-b border-navy/50 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-map-marker-alt text-orange mr-2"></i>Cotonou, Bénin</span>
+                <span><i class="fas fa-envelope text-orange mr-2"></i>solmac2025@gmail.com</span>
+                <span><i class="fas fa-clock text-orange mr-2"></i>Lun - Sam : 07h00 - 19h00</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-slate-400">Suivez-nous :</span>
+                <a href="https://www.facebook.com/profile.php?id=100092304769416" target="_blank" class="hover:text-orange transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/sltc-inter-sarl/" target="_blank" class="hover:text-orange transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@sltcinter" target="_blank" class="hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header (Bleu Marine Glass) -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass-nav py-4 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center bg-white/10 backdrop-blur-lg rounded-2xl px-6 py-3 border border-white/20 shadow-lg transition-all duration-500" id="navContainer">
-                <div class="flex items-center space-x-3">
-                    <a href="#accueil" class="flex items-center space-x-3">
-                        <img src="logo.jpg" alt="Logo SOLMAC SARL" class="logo-img" id="navLogo">
-                        <span class="text-xl font-black text-white" id="navTitle"><span class="text-blue-600">SOL</span><span class="text-orange-600">MAC</span> SARL</span>
-                    </a>
+            <div class="flex justify-between items-center">
+                
+                <!-- Logo -->
+                <a href="#accueil" onclick="navigateTo('accueil')" class="flex items-center group cursor-pointer" aria-label="Logo SOLMAC SARL">
+                    <div class="bg-white rounded-lg px-2.5 py-1.5 shadow-lg group-hover:scale-105 transition-transform border border-white/20">
+                        <img src="logo-crop.png" alt="SOLMAC SARL" class="h-9 w-auto block">
+                    </div>
+                </a>
+
+                <!-- Desktop Menu Dynamic Routing -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-white">
+                    <button onclick="navigateTo('accueil')" id="nav-accueil" class="nav-link text-orange border-b-2 border-orange pb-1 transition">Accueil</button>
+                    <button onclick="navigateTo('engins')" id="nav-engins" class="nav-link hover:text-orange transition pb-1">Parc d'Engins</button>
+                    <button onclick="navigateTo('services')" id="nav-services" class="nav-link hover:text-orange transition pb-1">Services</button>
+                    <button onclick="navigateTo('contact')" id="nav-realisations" class="nav-link hover:text-orange transition pb-1">Localisation</button>
                 </div>
-                <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-white" id="navLinks">
-                    <a href="#accueil" class="text-blue-400">Accueil</a>
-                    <a href="engins-sltc.html" class="hover:text-blue-400 transition">Engins</a>
-                    <a href="services-sltc.html" class="hover:text-blue-400 transition">Services</a>
-                    <a href="realisations-sltc.html" class="hover:text-blue-400 transition">Réalisations</a>
-                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105">Contact</a>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button onclick="navigateTo('accueil', 'devis')" class="bg-orange hover:bg-orange-dark text-white font-bold px-5 py-2.5 rounded-xl shadow-lg hover:shadow-orange/30 transition duration-300 flex items-center gap-2 text-sm">
+                        <span>Demander un Devis</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </button>
                 </div>
-                <button id="hamburgerBtn" class="md:hidden text-black text-2xl" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Ouvrir le menu">
+                    <i class="fas fa-bars" id="menu-icon"></i>
                 </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-dark border-b border-navy px-6 py-6 transition-all">
+            <div class="flex flex-col space-y-4 text-white font-medium">
+                <button onclick="navigateTo('accueil')" class="text-left hover:text-orange transition py-1">Accueil</button>
+                <button onclick="navigateTo('engins')" class="text-left hover:text-orange transition py-1">Parc d'Engins</button>
+                <button onclick="navigateTo('services')" class="text-left hover:text-orange transition py-1">Services</button>
+                <button onclick="navigateTo('realisations')" class="text-left hover:text-orange transition py-1">Réalisations</button>
+                <div class="pt-4 border-t border-navy flex flex-col space-y-3">
+                    <button onclick="navigateTo('accueil', 'devis')" class="bg-orange text-center text-white font-bold py-3 rounded-xl hover:bg-orange-dark transition">
+                        Demander un Devis
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden fixed w-full bg-gray-900 text-white md:hidden z-40 top-24 left-0 right-0 border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col space-y-4">
-            <a href="#accueil" class="hover:text-blue-400 transition py-2">Accueil</a>
-            <a href="engins-sltc.html" class="hover:text-blue-400 transition py-2">Engins</a>
-            <a href="services-sltc.html" class="hover:text-blue-400 transition py-2">Services</a>
-            <a href="realisations-sltc.html" class="hover:text-blue-400 transition py-2">Réalisations</a>
-            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition-all inline-block w-fit">Contact</a>
-        </div>
-    </div>
+    <!-- Main Content Dynamic Container -->
+    <main class="flex-grow pt-20">
 
-    <!-- Hero Section -->
-    <header id="accueil" class="bg-construction text-white min-h-screen flex items-center relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
-            <div class="max-w-3xl">
-                <div data-aos="fade-down" class="inline-block px-4 py-1 bg-blue-600/30 border border-blue-500/50 rounded-full mb-6">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-blue-200">Expertise BTP & Logistique</span>
+        <!-- ========================================== -->
+        <!-- PAGE 1: ACCUEIL / HOMEPAGE                 -->
+        <!-- ========================================== -->
+        <div id="page-accueil" class="page-view active">
+            <!-- Hero Section -->
+            <header class="text-white min-h-[90vh] flex items-center pt-16 pb-16 relative overflow-hidden">
+                <div class="fixed inset-0 -z-10">
+                    <video autoplay muted loop playsinline preload="auto" fetchpriority="high"
+                           poster="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80"
+                           class="w-full h-full object-cover">
+                        <source src="https://cdn.pixabay.com/video/2020/05/25/40132-424912045_small.mp4" type="video/mp4">
+                    </video>
                 </div>
-                <h1 data-aos="fade-right" data-aos-delay="200" class="text-4xl md:text-6xl font-black mb-8 leading-[1.1]">
-                    Votre partenaire fiable pour tous vos projets<span class="gradient-text"> de construction</span>.
-                </h1>
-                <p data-aos="fade-up" data-aos-delay="400" class="text-lg text-gray-300 mb-10 leading-relaxed border-l-4 border-blue-600 pl-6">
-                    SOLMAC SARL : location d'engins TP, transport spécialisé, services logistiques et matériels de sécurité. Des solutions fiables avec une équipe compétente et un matériel moderne.
-                </p>
-                <div data-aos="fade-up" data-aos-delay="600" class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/2290140468080" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-black px-10 py-5 rounded-2xl transition-all shadow-xl shadow-blue-600/30 uppercase text-xs tracking-widest flex items-center gap-2 cta-primary">
-                        <i class="fab fa-whatsapp text-lg"></i> Discuter du projet
-                    </a>
-                    <a href="engins-sltc.html" class="backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 px-10 py-5 rounded-2xl transition text-xs font-bold uppercase tracking-widest">Voir le parc</a>
-                </div>
-            </div>
-        </div>
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 floating">
-            <div class="w-1 h-12 bg-gradient-to-b from-blue-600 to-transparent rounded-full"></div>
-        </div>
-    </header>
+                <!-- Voile Bleu Marine profond sur la vidéo -->
+                <div class="fixed inset-0 bg-navy-dark/70 -z-10"></div>
 
-    <!-- À Propos Introduction Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <div class="inline-block px-4 py-1 bg-blue-600/20 border border-blue-500/50 rounded-full mb-6" data-aos="fade-down">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-blue-600">Qui sommes-nous</span>
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-black mb-6">Qui est <span class="text-blue-600">SOLMAC SARL ?</span></h2>
-                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                        SOLMAC est une entreprise spécialisée dans la location d'engins lourds et l'accompagnement des projets de construction, de manutention et de logistique. Nous mettons à la disposition de nos clients des équipements performants ainsi qu'un service de qualité répondant aux exigences des chantiers modernes
-                    </p>
-                    <div class="space-y-3">
-                        <div class="flex items-start gap-3">
-                            <div class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center mt-1 flex-shrink-0">
-                                <i class="fas fa-check text-white text-xs"></i>
-                            </div>
-                            <span class="text-gray-700">Qualité garantie sur tous les projets</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center mt-1 flex-shrink-0">
-                                <i class="fas fa-check text-white text-xs"></i>
-                            </div>
-                            <span class="text-gray-700">Respect des délais et des budgets</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center mt-1 flex-shrink-0">
-                                <i class="fas fa-check text-white text-xs"></i>
-                            </div>
-                            <span class="text-gray-700">Sécurité et conformité aux normes</span>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-left" class="rounded-2xl overflow-hidden shadow-xl h-96 bg-gray-200 flex items-center justify-center">
-                    <img src="logo.jpg" alt="Logo SOLMAC SARL" class="logo-img" style="width: 150px; height: 150px;">
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+                    <div class="grid lg:grid-cols-12 gap-12 items-center">
+                        
+                        <div class="lg:col-span-8 space-y-8">
+                            <!-- Main Title -->
+                            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight font-heading">
+                                L'Excellence Opérationnelle au Service de <span class="gradient-orange">Vos Chantiers.</span>
+                            </h1>
 
-    <!-- Nos Valeurs Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="section-divider"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-black mb-4">Nos <span class="text-blue-600">Valeurs</span></h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Les principes qui guident nos actions quotidiennement</p>
-            </div>
+                            <!-- Lead Paragraph -->
+                            <p class="text-lg text-slate-200 leading-relaxed max-w-2xl">
+                                SOLMAC SARL déploie une synergie parfaite entre <strong class="text-white">matériel de pointe</strong>, véhicules spécialisés et logistique pour réussir tous vos projets au Bénin.
+                            </p>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div data-aos="fade-up" class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-6">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4">Fiabilité</h3>
-                    <p class="text-gray-600">Nous garantissons des prestations de qualité, réalisées dans le respect des délais et des engagements pris envers nos clients.</p>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="100" class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-6">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4">Innovation</h3>
-                    <p class="text-gray-600">Nous intéfrons des solutions modernes et efficaces afin d'optimiser les performances de nos services et de la satisfaction de notre clientèle.</p>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="200" class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-6">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4">Engagement</h3>
-                    <p class="text-gray-600">Nous nous investissons pleinement dans la réussite des projets de nos partenaires grâce à un accompagnement professionnel et personnalisé.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-32 bg-gray-50">
-        <div class="section-divider"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="text-4xl md:text-6xl font-black mb-4">Nos <span class="text-blue-600">Services</span></h2>
-                <div class="animated-line mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div data-aos="fade-up" class="service-card group p-16 bg-white rounded-[2.5rem] shadow-sm hover:shadow-2xl border border-orange-200">
-                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-8 group-hover:bg-orange-600 group-hover:text-white transition-all duration-500">
-                        <i class="fas fa-truck-moving"></i>
-                    </div>
-                    <h3 class="text-2xl font-black mb-6">Logistique</h3>
-                    <ul class="space-y-4 text-gray-600 text-base">
-                        <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span><strong>Gestion de flotte</strong> - Organisation et suivi efficace des véhicules et équipements afin d'assurer une exploitation optimae</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span><strong>Acheminement des machines</strong> - Transport sécurisé des engins et équipements vers les différents chantiers</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span><strong>Opération de levage</strong> - Mise à disposition d'engins spécialisés et d'équipes qualifiées pour les traveaux de levage et de manutention lourde</span>
-                        </li>
-                    </ul>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="100" class="service-card group p-16 bg-white rounded-[2.5rem] shadow-sm hover:shadow-2xl border border-orange-200">
-                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-8 group-hover:bg-orange-600 group-hover:text-white transition-all duration-500">
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <h3 class="text-2xl font-black mb-6">BTP</h3>
-                    <ul class="space-y-4 text-gray-600 text-base">
-                        <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span><strong>Fourniture de matériaux de construction</strong> - Approvisionnement en matériaux de qualité pour tout type de projet de construction</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span><strong>Suivi des traveaux de construction</strong> - Accompagnement et controle des différentes phases de réalisation afin d'assurer la qualité et le respect des délais</span>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-    </section>
-
-    <!-- Nos Partenaires -->
-    <!-- Contact Section -->
-    <section id="contact" class="py-32 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-blue-600 rounded-[3rem] p-10 md:p-16 text-white relative overflow-hidden shadow-2xl" data-aos="zoom-in">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                
-                <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Prêt à démarrer ? Contactez-nous.</h2>
-                        <div class="space-y-6">
-                            <div class="flex items-center space-x-4 group">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition"><i class="fas fa-phone"></i></div>
-                                <span class="text-xl font-bold">+229 01 96 74 89 41 / 01 97 52 58 07</span>
-                            </div>
-                            <div class="flex items-center space-x-4 group">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition"><i class="fas fa-envelope"></i></div>
-                                <span class="text-xl font-bold">SOLMAC SARL2025@gmail.com </span>
-                            </div>
-                            <div class="flex items-center space-x-4 group">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition"><i class="fas fa-map-marker-alt"></i></div>
-                                <span class="text-xl font-bold">Cotonou</span>
-                            </div>
-                            <div class="pt-6">
-                                <a href="https://wa.me/2290140468080" target="_blank" class="inline-flex items-center bg-white text-blue-600 font-black px-8 py-4 rounded-xl hover:bg-gray-100 transition shadow-lg gap-2 cta-primary">
-                                    <i class="fab fa-whatsapp text-xl"></i> CONTACTER SUR WHATSAPP
+                            <!-- Action Buttons (Orange & Blanc) -->
+                            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                                <a href="https://wa.me/2290140468080?text=Bonjour,%20je%20souhaite%20reserver%20un%20engin%20BTP" target="_blank" rel="noopener" class="bg-orange hover:bg-orange-dark text-white font-extrabold px-8 py-4 rounded-xl shadow-lg shadow-orange/20 hover:shadow-orange/40 transition duration-300 flex items-center justify-center gap-3 text-base">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                    <span>Nous contacter sur WhatsApp</span>
                                 </a>
+                                <button onclick="navigateTo('engins')" class="bg-white/10 backdrop-blur hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl border border-white/30 transition duration-300 flex items-center justify-center gap-2 text-base">
+                                    <span>Explorer le Parc</span>
+                                    <i class="fas fa-chevron-right text-xs"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Services Highlights Section -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-orange font-extrabold text-xs uppercase tracking-widest bg-orange/10 px-4 py-1.5 rounded-full border border-orange/20">Nos Domaines d'Expertise</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold mt-4 text-navy font-heading">
+                            Des Solutions Intégrées pour le <span class="text-orange">BTP & la Logistique</span>
+                        </h2>
+                        <p class="text-slate-600 mt-4 text-base">
+                            Nous mettons à votre disposition une gamme complète de prestations certifiées pour concrétiser tous vos projets.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Service 1 -->
+                        <div class="glass-card card-hover p-8 rounded-3xl relative overflow-hidden group">
+                            <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-navy group-hover:text-white transition duration-300">
+                                <i class="fas fa-car-side"></i>
+                            </div>
+                            <h3 class="text-xl font-extrabold text-navy mb-3">Location de Véhicules</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Location de véhicules de transport, touristiques et de mission pour vos déplacements professionnels.
+                            </p>
+                            <button onclick="navigateTo('services')" class="inline-flex items-center text-sm font-bold text-orange hover:text-orange-dark transition">
+                                En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div class="glass-card card-hover p-8 rounded-3xl relative overflow-hidden group">
+                            <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-navy group-hover:text-white transition duration-300">
+                                <i class="fas fa-truck-pickup"></i>
+                            </div>
+                            <h3 class="text-xl font-extrabold text-navy mb-3">Prestation de Levage</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Levage industriel et manutention de charges lourdes sécurisées avec des équipements performants.
+                            </p>
+                            <button onclick="navigateTo('services')" class="inline-flex items-center text-sm font-bold text-orange hover:text-orange-dark transition">
+                                En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="glass-card card-hover p-8 rounded-3xl relative overflow-hidden group">
+                            <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-navy group-hover:text-white transition duration-300">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h3 class="text-xl font-extrabold text-navy mb-3">Aménagement de Pistes</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Ouverture, profilage et aménagement de pistes pour voies d'accès et chantiers exigeants.
+                            </p>
+                            <button onclick="navigateTo('services')" class="inline-flex items-center text-sm font-bold text-orange hover:text-orange-dark transition">
+                                En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Service 4 -->
+                        <div class="glass-card card-hover p-8 rounded-3xl relative overflow-hidden group">
+                            <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-navy group-hover:text-white transition duration-300">
+                                <i class="fas fa-mound"></i>
+                            </div>
+                            <h3 class="text-xl font-extrabold text-navy mb-3">Fourniture d'Agrégats</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Approvisionnement en concassé, gravier, sable et terre certifiés pour la construction.
+                            </p>
+                            <button onclick="navigateTo('services')" class="inline-flex items-center text-sm font-bold text-orange hover:text-orange-dark transition">
+                                En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Service 5 -->
+                        <div class="glass-card card-hover p-8 rounded-3xl relative overflow-hidden group">
+                            <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-navy group-hover:text-white transition duration-300">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <h3 class="text-xl font-extrabold text-navy mb-3">Fourniture de Matériaux</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Vente et livraison sur site de matériaux de construction conformes aux normes BTP.
+                            </p>
+                            <button onclick="navigateTo('services')" class="inline-flex items-center text-sm font-bold text-orange hover:text-orange-dark transition">
+                                En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Service 6 -->
+                        <div class="glass-card card-hover p-8 rounded-3xl relative overflow-hidden group">
+                            <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-navy group-hover:text-white transition duration-300">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h3 class="text-xl font-extrabold text-navy mb-3">Suivi de Travaux</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Accompagnement, contrôle qualité et suivi de la bonne exécution de vos chantiers.
+                            </p>
+                            <button onclick="navigateTo('services')" class="inline-flex items-center text-sm font-bold text-orange hover:text-orange-dark transition">
+                                En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section À Propos Intégrée à l'Accueil (Bleu Marine & Blanc) -->
+            <section class="py-20 bg-offwhite border-t border-slate-200" id="a-propos">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6">
+                            <span class="text-orange font-extrabold text-xs uppercase tracking-widest bg-orange/10 px-4 py-1.5 rounded-full">À Propos de SOLMAC SARL</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy font-heading">
+                                Un Acteur Majeur du <span class="text-orange">BTP & des Services</span> au Bénin
+                            </h2>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                <strong>SOLMAC SARL</strong> s'est imposée comme un partenaire de référence pour les entreprises de construction, les promoteurs immobiliers et les acteurs publics au Bénin.
+                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Notre mission est simple : offrir des solutions fiables, sécurisées et immédiatement opérationnelles pour garantir la réussite de vos projets, quelle que soit leur envergure.
+                            </p>
+                        </div>
+
+                        <!-- Boîte Bleu Marine -->
+                        <div class="bg-navy text-white p-8 rounded-3xl shadow-xl space-y-6">
+                            <h3 class="text-2xl font-extrabold text-orange font-heading">Nos 3 Piliers Fondamentaux</h3>
+                            <div class="space-y-6 text-xs">
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-orange flex items-center justify-center font-bold text-white flex-shrink-0 text-base shadow-lg">
+                                        <i class="fas fa-shield-halved"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-white text-base block mb-1">Sécurité</strong>
+                                        <span class="text-slate-300 leading-relaxed text-xs">Contrôles techniques rigoureux de tous nos équipements et respect strict des normes sur chaque chantier.</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-orange flex items-center justify-center font-bold text-white flex-shrink-0 text-base shadow-lg">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-white text-base block mb-1">Fiabilité</strong>
+                                        <span class="text-slate-300 leading-relaxed text-xs">Respect strict des engagements, des plannings et continuité de service sans interruption.</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-orange flex items-center justify-center font-bold text-white flex-shrink-0 text-base shadow-lg">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-white text-base block mb-1">Efficacité</strong>
+                                        <span class="text-slate-300 leading-relaxed text-xs">Déploiement rapide, processus optimisés et exécution de haute qualité pour la performance.</span>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <!-- Carte Google Maps -->
-                    <div class="rounded-2xl overflow-hidden shadow-xl h-96">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4548090722023!2d2.4177!3d6.4944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024312cecc69d9d%3A0x1234567890!2sKouhounou%2C%20Cotonou%2C%20B%C3%A9nin!5e0!3m2!1sfr!2sfr!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <!-- Form Devis Section (Fond Bleu Marine ultra profond) -->
+            <section class="py-20 bg-navy-dark text-white" id="devis">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span class="text-orange font-extrabold text-xs uppercase tracking-widest bg-orange/10 px-4 py-1.5 rounded-full border border-orange/20">Cotation Gratuite</span>
+                            <h2 class="text-3xl sm:text-5xl font-extrabold mt-4 font-heading">
+                                Obtenez un Devis <span class="text-orange">Sous 24 Heures</span>
+                            </h2>
+                            <p class="text-slate-300 mt-4 text-sm leading-relaxed">
+                                Remplissez notre formulaire interactif. Nos équipes vous recontactent immédiatement avec une estimation adaptée à vos contraintes.
+                            </p>
+                            <div class="mt-8 space-y-4 text-sm text-slate-300">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-orange text-lg"></i>
+                                    <span>Sans engagement et totalement personnalisé</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-orange text-lg"></i>
+                                    <span>Possibilité d'intervention d'urgence 24h/24</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-orange text-lg"></i>
+                                    <span>Équipes et opérateurs certifiés</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Formulaire Bleu Marine classique -->
+                        <div class="bg-navy p-8 rounded-3xl shadow-2xl">
+                            <form id="quoteForm" class="space-y-4">
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1">Nom complet *</label>
+                                        <input type="text" id="form-name" required placeholder="Votre nom" class="w-full bg-navy-dark border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1">Téléphone / WhatsApp *</label>
+                                        <input type="tel" id="form-phone" required placeholder="+229 01..." class="w-full bg-navy-dark border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Type de besoin *</label>
+                                    <select id="form-service" class="w-full bg-navy-dark border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange">
+                                        <option value="Location de véhicules de transport, touristique et de mission">Location de véhicules</option>
+                                        <option value="Prestation de levage">Prestation de levage</option>
+                                        <option value="Aménagement de pistes">Aménagement de pistes</option>
+                                        <option value="Fourniture d'agrégats">Fourniture d'agrégats</option>
+                                        <option value="Fourniture de matériaux de construction">Fourniture de matériaux de construction</option>
+                                        <option value="Assistance et suivi de travaux de construction">Assistance et suivi de travaux</option>
+                                        <option value="Commerce général">Commerce général</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Lieu du Chantier (Ville / Zone)</label>
+                                    <input type="text" id="form-location" placeholder="Ex: Cotonou, Calavi..." class="w-full bg-navy-dark border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange">
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Détails du projet</label>
+                                    <textarea id="form-message" rows="3" placeholder="Précisez la quantité, la durée..." class="w-full bg-navy-dark border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full py-4 bg-orange hover:bg-orange-dark text-white font-extrabold rounded-xl shadow-lg transition duration-300 flex items-center justify-center gap-2 text-base">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                    <span>Envoyer la demande</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PAGE 2: PARC D'ENGINS                      -->
+        <!-- ========================================== -->
+        <div id="page-engins" class="page-view">
+            <!-- Header Page -->
+            <div class="relative bg-navy-dark text-white py-20 lg:py-32 overflow-hidden">
+                <div class="absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1920&q=80" alt="Parc d'engins" class="w-full h-full object-cover opacity-20">
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy/90 to-transparent"></div>
+                </div>
+                
+                <div class="absolute bottom-0 w-full text-[#f8fafc] -mb-1">
+                    <svg viewBox="0 0 1440 120" class="w-full h-10 sm:h-16 lg:h-20 fill-current" preserveAspectRatio="none">
+                        <path d="M0,120 L1440,120 L1440,0 C1120,120 720,120 0,0 Z"></path>
+                    </svg>
+                </div>
+
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+                    <div class="max-w-3xl">
+                        <span class="inline-flex items-center text-orange font-extrabold text-xs uppercase tracking-widest bg-orange/10 px-4 py-1.5 rounded-full border border-orange/20 backdrop-blur-sm shadow-lg">
+                            <i class="fas fa-tractor mr-2"></i> Flotte High-Tech
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-6 font-heading leading-tight">
+                            Notre Parc <br/><span class="gradient-orange">d'Engins de Chantier</span>
+                        </h1>
+                        <p class="text-slate-300 mt-6 text-base sm:text-lg max-w-2xl leading-relaxed">
+                            Des machines modernes, révisées et prêtes à être déployées sur vos chantiers partout au Bénin.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12 mb-16 border-b border-gray-800 pb-16">
-                <!-- Info Colonne -->
-                <div>
-                    <div class="flex items-center space-x-3 mb-8">
-                        <img src="logo.jpg" alt="Logo SOLMAC SARL" class="logo-img">
-                        <span class="text-2xl font-black">SOLMAC SARL</span>
-                    </div>
-                    <p class="text-gray-400 leading-relaxed mb-8">
-                        Expertise reconnue dans le domaine du BTP et de la logistique au Bénin et à l'international.
-                    </p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <!-- Filter Tabs (Bleu Marine et Blanc) -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10" id="fleet-filters">
+                    <button onclick="filterFleet('all')" class="filter-btn active bg-navy text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow">Tous les engins</button>
+                    <button onclick="filterFleet('terrassement')" class="filter-btn bg-white hover:bg-slate-100 text-navy px-5 py-2.5 rounded-xl font-bold text-sm border border-slate-200">Terrassement</button>
+                    <button onclick="filterFleet('levage')" class="filter-btn bg-white hover:bg-slate-100 text-navy px-5 py-2.5 rounded-xl font-bold text-sm border border-slate-200">Levage</button>
+                    <button onclick="filterFleet('transport')" class="filter-btn bg-white hover:bg-slate-100 text-navy px-5 py-2.5 rounded-xl font-bold text-sm border border-slate-200">Transport & Route</button>
                 </div>
 
-                <!-- Liens Rapides -->
-                <div class="flex flex-col space-y-4">
-                    <h4 class="text-lg font-bold mb-4 uppercase tracking-widest text-blue-500">Navigation</h4>
-                    <a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a>
-                    <a href="engins-sltc.html" class="text-gray-400 hover:text-white transition">Engins</a>
-                    <a href="services-sltc.html" class="text-gray-400 hover:text-white transition">Services</a>
-                    <a href="realisations-sltc.html" class="text-gray-400 hover:text-white transition">Réalisations</a>
-                    <a href="apropos-sltc.html" class="text-gray-400 hover:text-white transition">À propos</a>
-                </div>
-
-                <!-- Réseaux Sociaux -->
-                <div>
-                    <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-blue-500">Suivez-nous</h4>
-                    <div class="flex space-x-4 mb-8">
-                        <a href="https://www.facebook.com/profile.php?id=100092304769416" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition duration-300">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/sltc-inter-sarl/" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition duration-300">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-pink-600 transition duration-300">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@sltcinter" target="_blank" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-black transition duration-300">
-                            <i class="fab fa-tiktok text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Contact -->
-                <div>
-                    <h4 class="text-lg font-bold mb-8 uppercase tracking-widest text-blue-500">Contact</h4>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-phone text-blue-500 mt-1"></i>
-                            <div class="text-gray-400 text-sm">
-                                <p>+229 01 40 46 80 80</p>
-                                <p>+229 01 66 92 48 86</p>
-                            </div>
+                <!-- Machinery Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="fleet-grid">
+                    
+                    <!-- Item -->
+                    <div class="fleet-item terrassement bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg card-hover">
+                        <div class="h-56 bg-navy relative">
+                            <img src="bulldozer.jpg" alt="Bulldozer CAT D7" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-orange text-white text-xs font-bold px-3 py-1 rounded-full">Terrassement</span>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-envelope text-blue-500 mt-1"></i>
-                            <a href="mailto:SOLMAC solmac2025@gmail.com" class="text-gray-400 hover:text-white transition text-sm">
-                                SOLMAC solmac2025@gmail.com
+                        <div class="p-6 space-y-4">
+                            <h3 class="text-2xl font-extrabold text-navy font-heading">Bulldozer CAT D7G / D8R</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">Puissant bulldozer pour décapage de terrain, poussée de terre et ouverture de voies.</p>
+
+                            <a href="https://wa.me/2290140468080?text=Bonjour,%20je%20souhaite%20louer%20le%20Bulldozer%20CAT" target="_blank" class="block text-center py-3 bg-navy hover:bg-navy-light text-white font-bold rounded-xl text-sm transition">
+                                <i class="fab fa-whatsapp mr-2"></i>Réserver avec chauffeur
                             </a>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-blue-500 mt-1"></i>
-                            <p class="text-gray-400 text-sm">Cotonou, Bénin</p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="fleet-item terrassement bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg card-hover">
+                        <div class="h-56 bg-navy relative">
+                            <img src="chargeuse.png" alt="Chargeuse 956" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-orange text-white text-xs font-bold px-3 py-1 rounded-full">Chargement</span>
                         </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="text-2xl font-extrabold text-navy font-heading">Chargeuse Liugong / CAT 956</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">Chargement rapide de camions bennes, déplacement de granulats et remblaiement.</p>
+
+                            <a href="https://wa.me/2290140468080?text=Bonjour,%20je%20souhaite%20louer%20la%20Chargeuse%20956" target="_blank" class="block text-center py-3 bg-navy hover:bg-navy-light text-white font-bold rounded-xl text-sm transition">
+                                <i class="fab fa-whatsapp mr-2"></i>Réserver cet engin
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="fleet-item levage bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg card-hover">
+                        <div class="h-56 bg-navy relative">
+                            <img src="grue.png" alt="Grue Mobile" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-orange text-white text-xs font-bold px-3 py-1 rounded-full">Levage</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="text-2xl font-extrabold text-navy font-heading">Grue Mobile XCMG 75T - 100T</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">Manutention de charges lourdes, montage de structures et portiques industriels.</p>
+
+                            <a href="https://wa.me/2290140468080?text=Bonjour,%20je%20souhaite%20louer%20la%20Grue%20Mobile" target="_blank" class="block text-center py-3 bg-navy hover:bg-navy-light text-white font-bold rounded-xl text-sm transition">
+                                <i class="fab fa-whatsapp mr-2"></i>Réserver cet engin
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="fleet-item terrassement bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg card-hover">
+                        <div class="h-56 bg-navy relative">
+                            <img src="pelle.png" alt="Pelle Hydraulique" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-orange text-white text-xs font-bold px-3 py-1 rounded-full">Excavation</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="text-2xl font-extrabold text-navy font-heading">Pelle Hydraulique 21T - 25T</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">Fouilles de fondation, tranchées précises, démolition et creusement de bassins.</p>
+
+                            <a href="https://wa.me/2290140468080?text=Bonjour,%20je%20souhaite%20louer%20la%20Pelle%20Hydraulique" target="_blank" class="block text-center py-3 bg-navy hover:bg-navy-light text-white font-bold rounded-xl text-sm transition">
+                                <i class="fab fa-whatsapp mr-2"></i>Réserver cet engin
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Item -->
+                    <div class="fleet-item terrassement bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg card-hover">
+                        <div class="h-56 bg-navy relative">
+                            <img src="niveleuse.png" alt="Niveleuse" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-orange text-white text-xs font-bold px-3 py-1 rounded-full">Excavation</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="text-2xl font-extrabold text-navy font-heading">Niveleuse</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">Préparation de terrain pour construction, déplacement de terre,création de pente</p>
+
+                            <a href="https://wa.me/2290140468080?text=Bonjour,%20je%20souhaite%20louer%20la%20Pelle%20Hydraulique" target="_blank" class="block text-center py-3 bg-navy hover:bg-navy-light text-white font-bold rounded-xl text-sm transition">
+                                <i class="fab fa-whatsapp mr-2"></i>Réserver cet engin
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="fleet-item terrassement bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg card-hover">
+                        <div class="h-56 bg-navy relative">
+                            <img src="bobcat.png" alt="Bobcat Mini-Chargeuse" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-orange text-white text-xs font-bold px-3 py-1 rounded-full">Terrassement</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="text-2xl font-extrabold text-navy font-heading">Bobcat / Mini-Chargeuse</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">Nivellement fin, chargement et manutention dans les espaces réduits et chantiers confinés.</p>
+
+                            <a href="https://wa.me/2290140468080?text=Bonjour,%20je%20souhaite%20louer%20le%20Bobcat" target="_blank" class="block text-center py-3 bg-navy hover:bg-navy-light text-white font-bold rounded-xl text-sm transition">
+                                <i class="fab fa-whatsapp mr-2"></i>Réserver cet engin
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="fleet-item transport bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg card-hover">
+                        <div class="h-56 bg-navy relative">
+                            <img src="chariot.png" alt="Chariot Élévateur" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-orange text-white text-xs font-bold px-3 py-1 rounded-full">Manutention</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="text-2xl font-extrabold text-navy font-heading">Chariot Élévateur</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">Manutention et levage de charges palettisées sur chantier, dépôt et zone de stockage.</p>
+
+                            <a href="https://wa.me/2290140468080?text=Bonjour,%20je%20souhaite%20louer%20le%20Chariot%20Elevateur" target="_blank" class="block text-center py-3 bg-navy hover:bg-navy-light text-white font-bold rounded-xl text-sm transition">
+                                <i class="fab fa-whatsapp mr-2"></i>Réserver cet engin
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PAGE 3: SERVICES BTP                       -->
+        <!-- ========================================== -->
+        <div id="page-services" class="page-view">
+            <!-- Header Page -->
+            <div class="relative bg-navy-dark text-white py-20 lg:py-32 overflow-hidden">
+                <div class="absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80" alt="Nos Services" class="w-full h-full object-cover opacity-20">
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy/90 to-transparent"></div>
+                </div>
+                
+                <div class="absolute bottom-0 w-full text-[#f8fafc] -mb-1">
+                    <svg viewBox="0 0 1440 120" class="w-full h-10 sm:h-16 lg:h-20 fill-current" preserveAspectRatio="none">
+                        <path d="M0,120 L1440,120 L1440,0 C1120,120 720,120 0,0 Z"></path>
+                    </svg>
+                </div>
+
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+                    <div class="max-w-3xl">
+                        <span class="inline-flex items-center text-orange font-extrabold text-xs uppercase tracking-widest bg-orange/10 px-4 py-1.5 rounded-full border border-orange/20 backdrop-blur-sm shadow-lg">
+                            <i class="fas fa-hard-hat mr-2"></i> Accompagnement Sur-Mesure
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-6 font-heading leading-tight">
+                            Nos Services <br/><span class="gradient-orange">& Prestations</span>
+                        </h1>
+                        <p class="text-slate-300 mt-6 text-base sm:text-lg max-w-2xl leading-relaxed">
+                            De la fourniture de matériaux au suivi de chantier, SOLMAC SARL est votre partenaire d'exécution de confiance.
+                        </p>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center text-gray-500">
-                <p class="text-xs tracking-[0.3em] uppercase font-bold">© 2025 SOLMAC SARL | Expertise & Fiabilité</p>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+                
+                <!-- Service Detailed -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-md">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-navy font-heading">1. Location de Véhicules de Transport, Touristique et de Mission</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Nous mettons à disposition une flotte variée et récente adaptée à tous vos déplacements professionnels, missions de terrain et transports d'équipes.
+                        </p>
+                        <ul class="space-y-2 text-xs text-navy">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Véhicules utilitaires, 4x4 de mission et berlines touristiques</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Formules avec ou sans chauffeurs expérimentés</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Entretien rigoureux et assistance routière continue</li>
+                        </ul>
+                        <button onclick="navigateTo('accueil', 'devis')" class="bg-orange hover:bg-orange-dark text-white font-bold px-6 py-3 rounded-xl text-sm transition">Réserver un véhicule</button>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden bg-navy h-80">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Location véhicules" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Service Detailed -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-md">
+                    <div class="order-2 lg:order-1 rounded-2xl overflow-hidden bg-navy h-80">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Levage" class="w-full h-full object-cover">
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <div class="w-14 h-14 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold">
+                            <i class="fas fa-truck-pickup"></i>
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-navy font-heading">2. Prestation de Levage</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Solutions de levage et de manutention industrielle pour objets et structures de toutes capacités en toute sécurité.
+                        </p>
+                        <ul class="space-y-2 text-xs text-navy">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Grues mobiles télescopiques et camion-grues</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Manipulation de conteneurs, charpentes et machines hors-gabarit</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Opérateurs de levage hautement certifiés</li>
+                        </ul>
+                        <button onclick="navigateTo('accueil', 'devis')" class="bg-navy hover:bg-navy-light text-white font-bold px-6 py-3 rounded-xl text-sm transition">Demander un devis levage</button>
+                    </div>
+                </div>
+
+                <!-- Service Detailed -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-md">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-navy font-heading">3. Aménagement de Pistes</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Travaux d'ouverture, de reprofilage et d'aménagement de pistes pour désenclaver vos zones de chantiers ou faciliter la circulation rurale et industrielle.
+                        </p>
+                        <ul class="space-y-2 text-xs text-navy">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Décapage, dessouchage et compactage de voies</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Rechargement en latérite et création d'ouvrages d'assainissement</li>
+                        </ul>
+                        <button onclick="navigateTo('accueil', 'devis')" class="bg-orange hover:bg-orange-dark text-white font-bold px-6 py-3 rounded-xl text-sm transition">Étude de projet de piste</button>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden bg-navy h-80">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Aménagement de pistes" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Service Detailed -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-md">
+                    <div class="order-2 lg:order-1 rounded-2xl overflow-hidden bg-navy h-80">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80" alt="Fourniture d'agrégats et matériaux" class="w-full h-full object-cover">
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <div class="w-14 h-14 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold">
+                            <i class="fas fa-mound"></i>
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-navy font-heading">4 & 5. Fourniture d'Agrégats & Matériaux</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Livraison directe sur vos chantiers de tous types d'agrégats (concassé, gravier, sable, terre de remblai) et matériaux de construction.
+                        </p>
+                        <ul class="space-y-2 text-xs text-navy">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Livraison par camions bennes de grande capacité</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-orange"></i> Matériaux testés et conformes aux normes techniques</li>
+                        </ul>
+                        <button onclick="navigateTo('accueil', 'devis')" class="bg-navy hover:bg-navy-light text-white font-bold px-6 py-3 rounded-xl text-sm transition">Commander des matériaux</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PAGE 4: RÉALISATIONS                       -->
+        <!-- ========================================== -->
+        <div id="page-realisations" class="page-view">
+            <!-- Header Page -->
+            <div class="relative bg-navy-dark text-white py-20 lg:py-32 overflow-hidden">
+                <div class="absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80" alt="Réalisations" class="w-full h-full object-cover opacity-20">
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy/90 to-transparent"></div>
+                </div>
+                
+                <div class="absolute bottom-0 w-full text-[#f8fafc] -mb-1">
+                    <svg viewBox="0 0 1440 120" class="w-full h-10 sm:h-16 lg:h-20 fill-current" preserveAspectRatio="none">
+                        <path d="M0,120 L1440,120 L1440,0 C1120,120 720,120 0,0 Z"></path>
+                    </svg>
+                </div>
+
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+                    <div class="max-w-3xl">
+                        <span class="inline-flex items-center text-orange font-extrabold text-xs uppercase tracking-widest bg-orange/10 px-4 py-1.5 rounded-full border border-orange/20 backdrop-blur-sm shadow-lg">
+                            <i class="fas fa-camera mr-2"></i> Preuves du Terrain
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-6 font-heading leading-tight">
+                            Nos Réalisations <br/><span class="gradient-orange">sur le Terrain</span>
+                        </h1>
+                        <p class="text-slate-300 mt-6 text-base sm:text-lg max-w-2xl leading-relaxed">
+                            Découvrez un aperçu des chantiers majeurs concrétisés par les équipes et machines de SOLMAC SARL au Bénin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md card-hover">
+                        <div class="h-52 bg-navy">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80" alt="Projet Cotonou" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <span class="text-xs font-bold text-orange bg-orange/10 px-3 py-1 rounded-full">Zone Portuaire — Cotonou</span>
+                            <h3 class="text-xl font-extrabold text-navy font-heading">Terrassement & Aménagement de Plateforme</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Décapage et compactage intensif d'une zone logistique de 5 hectares pour le stockage de conteneurs.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md card-hover">
+                        <div class="h-52 bg-navy">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Projet Levage" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <span class="text-xs font-bold text-orange bg-orange/10 px-3 py-1 rounded-full">GDIZ — Glo-Djigbé</span>
+                            <h3 class="text-xl font-extrabold text-navy font-heading">Levage de Poutres & Charpentes Métalliques</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Opération complexe de montage industriel réalisée à l'aide de nos grues mobiles 75 Tonnes.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md card-hover">
+                        <div class="h-52 bg-navy">
+                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Projet Route" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <span class="text-xs font-bold text-orange bg-orange/10 px-3 py-1 rounded-full">Abomey-Calavi</span>
+                            <h3 class="text-xl font-extrabold text-navy font-heading">Ouverture de Pistes & Voiries Urbaines</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Nivellement de précision et rechargement en latérite pour faciliter la mobilité résidentielle.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PAGE 5: CONTACT & GPS LOCATION             -->
+        <!-- ========================================== -->
+        <div id="page-contact" class="page-view">
+            <!-- Header Page -->
+            <div class="relative bg-navy-dark text-white py-20 lg:py-32 overflow-hidden">
+                <div class="absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=1920&q=80" alt="Contact" class="w-full h-full object-cover opacity-20">
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy/90 to-transparent"></div>
+                </div>
+                
+                <div class="absolute bottom-0 w-full text-[#f8fafc] -mb-1">
+                    <svg viewBox="0 0 1440 120" class="w-full h-10 sm:h-16 lg:h-20 fill-current" preserveAspectRatio="none">
+                        <path d="M0,120 L1440,120 L1440,0 C1120,120 720,120 0,0 Z"></path>
+                    </svg>
+                </div>
+
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+                    <div class="max-w-3xl">
+                        <span class="inline-flex items-center text-orange font-extrabold text-xs uppercase tracking-widest bg-orange/10 px-4 py-1.5 rounded-full border border-orange/20 backdrop-blur-sm shadow-lg">
+                            <i class="fas fa-headset mr-2"></i> À Votre Écoute 24/7
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-6 font-heading leading-tight">
+                            Contactez-nous & <br/><span class="gradient-orange">Localisation GPS</span>
+                        </h1>
+                        <p class="text-slate-300 mt-6 text-base sm:text-lg max-w-2xl leading-relaxed">
+                            Besoin d'un devis express, d'une intervention rapide ou d'une visite à notre siège social ? Retrouvez toutes nos coordonnées ci-dessous.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+                
+                <!-- Contact Cards -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Adresse / GPS Card -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg text-center space-y-4 card-hover">
+                        <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto">
+                            <i class="fas fa-map-location-dot"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy font-heading">Siège Social & Adresse GPS</h3>
+                        <p class="text-xs text-slate-600">Cotonou, République du Bénin</p>
+                        <a href="https://maps.google.com/?q=Cotonou,Benin" target="_blank" rel="noopener" class="inline-flex items-center text-xs font-bold text-orange hover:text-orange-dark transition">
+                            <i class="fas fa-diamond-turn-right mr-1.5"></i>Ouvrir dans Google Maps
+                        </a>
+                    </div>
+
+                    <!-- Téléphones Card -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg text-center space-y-4 card-hover">
+                        <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy font-heading">Téléphones & WhatsApp</h3>
+                        <div class="space-y-1 text-xs text-navy font-semibold">
+                            <p><a href="tel:+2290140468080" class="hover:text-orange transition">+229 01 40 46 80 80</a></p>
+                            <p><a href="tel:+2290196748941" class="hover:text-orange transition">+229 01 96 74 89 41</a></p>
+                        </div>
+                        <a href="https://wa.me/2290140468080" target="_blank" class="inline-flex items-center text-xs font-bold text-orange hover:text-orange-dark transition">
+                            <i class="fab fa-whatsapp mr-1.5"></i>Discuter sur WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Email & Horaires Card -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg text-center space-y-4 card-hover">
+                        <div class="w-16 h-16 bg-navy/5 text-navy rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy font-heading">Email & Horaires</h3>
+                        <p class="text-xs text-navy font-semibold">
+                            <a href="mailto:solmac2025@gmail.com" class="hover:text-orange transition">solmac2025@gmail.com</a>
+                        </p>
+                        <p class="text-xs text-slate-500">Du Lundi au Samedi : 07h00 - 19h00<br>(Assistance Chantier 24h/24)</p>
+                    </div>
+
+                </div>
+
+                <!-- Google Maps Interactive Embed Frame -->
+                <div class="bg-white rounded-3xl border border-slate-200 p-4 shadow-xl overflow-hidden space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-center px-4 pt-2">
+                        <div>
+                            <h3 class="text-2xl font-extrabold text-navy font-heading">Localisation de nos bureaux à Cotonou</h3>
+                            <p class="text-xs text-slate-500">Bénin — Zone d'intervention sur l'ensemble du territoire national</p>
+                        </div>
+                        <a href="https://maps.google.com/?q=Cotonou,Benin" target="_blank" class="mt-2 sm:mt-0 bg-orange hover:bg-orange-dark text-white text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-2">
+                            <i class="fas fa-location-arrow"></i>
+                            <span>Itinéraire GPS</span>
+                        </a>
+                    </div>
+                    <div class="w-full h-96 rounded-2xl overflow-hidden shadow-inner border border-slate-100">
+                        <iframe 
+                            title="Carte GPS SOLMAC SARL Cotonou"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126868.80218768233!2d2.3483984!3d6.3702928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023556b6c0084ad%3A0xb35186b5c3e45995!2sCotonou%2C%20Benin!5e0!3m2!1sfr!2sbf!4v1700000000000!5m2!1sfr!2sbf" 
+                            class="w-full h-full border-0" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Global (Bleu Marine ultra foncé) -->
+    <footer class="bg-navy-dark text-slate-300 pt-16 pb-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <div class="bg-white rounded-lg px-2.5 py-1.5 shadow-lg inline-block">
+                            <img src="logo-crop.png" alt="SOLMAC SARL" class="h-9 w-auto block">
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Spécialiste de la location de véhicules, des prestations de levage, aménagement de pistes, fourniture d'agrégats et matériaux de construction, suivi de travaux et commerce général au Bénin.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/profile.php?id=61555829861259" target="_blank" class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-orange transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Nav -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Navigation</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><button onclick="navigateTo('accueil')" class="hover:text-orange transition">Accueil</button></li>
+                        <li><button onclick="navigateTo('engins')" class="hover:text-orange transition">Nos Engins de Chantier</button></li>
+                        <li><button onclick="navigateTo('services')" class="hover:text-orange transition">Nos Services & Prestations</button></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact & Siège</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-orange mt-1"></i>
+                            <span>Cotonou, Bénin</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone text-orange mt-1"></i>
+                            <div>
+                                <p>+229 01 40 46 80 80</p>
+                                <p>+229 01 96 74 89 41</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope text-orange mt-1"></i>
+                            <span>solmac2025@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-navy text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>© 2025 SOLMAC SARL — Tous droits réservés.</p>
+                <p class="text-[11px]">BTP, Services & Commerce Général au Bénin.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "SOLMAC SARL",
-      "image": "https://SOLMAC SARL.com/logo.png",
-      "description": "Expert en location d'engins de TP, services de terrassement et logistique professionnelle au Bénin",
-      "telephone": "+229 01 96 74 89 41",
-      "email": "sltcinter20@gmail.com",
-      "url": "https://sltcinter.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Kouhounou",
-        "addressLocality": "Cotonou",
-        "addressRegion": "Littoral",
-        "postalCode": "229",
-        "addressCountry": "BJ"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Bénin"
-      },
-      "priceRange": "$$$",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=100092304769416",
-        "https://www.linkedin.com/company/sltc-inter-sarl/",
-        "https://www.tiktok.com/@sltcinter"
-      ],
-      "serviceArea": {
-        "@type": "Country",
-        "name": "Bénin"
-      },
-      "knowsAbout": [
-        "Location d'engins de TP",
-        "Services de terrassement",
-        "Logistique professionnelle",
-        "Construction BTP",
-        "Génie civil",
-        "Transport spécialisé"
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "SOLMAC SARL",
-      "alternateName": "SOLMAC SARL",
-      "url": "https://sltcinter.com",
-      "logo": "https://SOLMAC SARL.com/logo.png",
-      "description": "Expert en location d'engins de TP, terrassement et logistique au Bénin",
-      "foundingDate": "2020",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Kouhounou",
-        "addressLocality": "Cotonou",
-        "addressCountry": "BJ"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "telephone": "+229 01 96 74 89 41",
-        "email": "sltcinter20@gmail.com"
-      },
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=100092304769416",
-        "https://www.linkedin.com/company/sltc-inter-sarl/",
-        "https://www.tiktok.com/@sltcinter"
-      ]
-    }
-    </script>
-    
+    <!-- Scripts & Navigation logic -->
     <script>
-        AOS.init({ duration: 1000, once: true });
+        // Router System for Single Page switching
+        function navigateTo(pageId, targetSectionId = null) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(p => p.classList.remove('active'));
+
+            // Show selected page
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Update nav active styles
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('text-orange', 'border-b-2', 'border-orange');
+            });
+            const activeNav = document.getElementById('nav-' + pageId);
+            if (activeNav) {
+                activeNav.classList.add('text-orange', 'border-b-2', 'border-orange');
+            }
+
+            // Scroll to section or top
+            if (targetSectionId) {
+                setTimeout(() => {
+                    const el = document.getElementById(targetSectionId);
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+            document.getElementById('menu-icon').className = 'fas fa-bars';
+        }
 
         // Mobile Menu Toggle
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
 
-        hamburgerBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close menu when a link is clicked
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Navbar scroll logic
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            const container = document.getElementById('navContainer');
-            const logo = document.getElementById('navLogo');
-            const title = document.getElementById('navTitle');
-            const links = document.getElementById('navLinks');
-
-            if (window.scrollY > 50) {
-                nav.classList.replace('py-6', 'py-3');
-                container.classList.replace('bg-white/10', 'bg-white');
-                container.classList.add('shadow-xl');
-                logo.classList.add('logo-scrolled');
-                title.classList.replace('text-white', 'text-gray-900');
-                links.classList.replace('text-white', 'text-gray-600');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fas fa-bars';
             } else {
-                nav.classList.replace('py-3', 'py-6');
-                container.classList.replace('bg-white', 'bg-white/10');
-                container.classList.remove('shadow-xl');
-                logo.classList.remove('logo-scrolled');
-                title.classList.replace('text-gray-900', 'text-white');
-                links.classList.replace('text-gray-600', 'text-white');
+                menuIcon.className = 'fas fa-xmark';
             }
         });
 
-        // Carousel logic
-        const track = document.getElementById('carouselTrack');
-        const nextBtn = document.getElementById('nextBtn');
-        const prevBtn = document.getElementById('prevBtn');
-        let index = 0;
+        // Filter Fleet Items
+        function filterFleet(category) {
+            const items = document.querySelectorAll('.fleet-item');
+            const btns = document.querySelectorAll('.filter-btn');
 
-        function updateCarousel() {
-            const visible = window.innerWidth >= 768 ? 3 : 1;
-            const width = 100 / visible;
-            track.style.transform = `translateX(-${index * width}%)`;
+            btns.forEach(btn => {
+                btn.classList.remove('active', 'bg-navy', 'text-white');
+                btn.classList.add('bg-white', 'text-navy');
+            });
+
+            event.target.classList.add('active', 'bg-navy', 'text-white');
+            event.target.classList.remove('bg-white', 'text-navy');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
         }
 
-        nextBtn.addEventListener('click', () => {
-            const max = track.children.length - (window.innerWidth >= 768 ? 3 : 1);
-            index = index >= max ? 0 : index + 1;
-            updateCarousel();
-        });
+        // Form Submission WhatsApp Dynamic Redirect
+        const quoteForm = document.getElementById('quoteForm');
+        if (quoteForm) {
+            quoteForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('form-name').value;
+                const phone = document.getElementById('form-phone').value;
+                const service = document.getElementById('form-service').value;
+                const location = document.getElementById('form-location').value;
+                const message = document.getElementById('form-message').value;
 
-        prevBtn.addEventListener('click', () => {
-            const max = track.children.length - (window.innerWidth >= 768 ? 3 : 1);
-            index = index <= 0 ? max : index - 1;
-            updateCarousel();
-        });
+                const whatsappMessage = `*Demande de Devis - SOLMAC SARL*%0A%0A` +
+                    `*Nom:* ${encodeURIComponent(name)}%0A` +
+                    `*Téléphone:* ${encodeURIComponent(phone)}%0A` +
+                    `*Service:* ${encodeURIComponent(service)}%0A` +
+                    `*Lieu:* ${encodeURIComponent(location)}%0A` +
+                    `*Détails:* ${encodeURIComponent(message)}`;
 
-        window.addEventListener('resize', updateCarousel);
+                window.open(`https://wa.me/2290140468080?text=${whatsappMessage}`, '_blank');
+            });
+        }
     </script>
 </body>
 </html>
